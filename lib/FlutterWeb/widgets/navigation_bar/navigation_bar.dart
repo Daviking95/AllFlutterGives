@@ -1,37 +1,17 @@
+import 'package:all_flutter_gives/FlutterWeb/widgets/navigation_bar/navbar_logo.dart';
+import 'package:all_flutter_gives/FlutterWeb/widgets/navigation_bar/navigation_bar_tablet_desktop.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+import 'navbar_items.dart';
+import 'navigation_bar_mobile.dart';
 
 class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            height: 80,
-            width: 150,
-            child: Image.asset('assets/logo.png'),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              _NavBarItem('Episodes'),
-              SizedBox(
-                width: 60,
-              ),
-              _NavBarItem('About')
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-  _NavBarItem(String title) {
-    return Text(
-      title,
-      style: TextStyle(fontSize: 18),
+    return ScreenTypeLayout(
+      mobile: NavigationBarMobile(),
+      tablet: NavigationBarTabletDesktop(),
     );
   }
 }
