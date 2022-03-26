@@ -1,5 +1,5 @@
 
-import 'package:all_flutter_gives/FlutterWeb/widgets/navigation_bar/navbar_items.dart';
+import 'package:all_flutter_gives/FlutterWeb/widgets/navbar_item/navbar_items.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItem extends StatelessWidget {
@@ -16,7 +16,7 @@ class DrawerItem extends StatelessWidget {
         children: <Widget>[
           Icon(icon),
           SizedBox(width: 30),
-          navigationBarItems(title, navigationPath),
+          NavBarItem(title, navigationPath),
         ],
       ),
     );

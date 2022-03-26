@@ -29,7 +29,7 @@ class ApiCall {
 
     else {
       print("Loading from API");
-      var response = await http.get(API_URL);
+      var response = await http.get(Uri.parse(API_URL));
 
       if (response.statusCode == 200) {
         var jsonResponse = response.body;

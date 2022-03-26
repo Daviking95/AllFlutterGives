@@ -12,7 +12,8 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../../locator.dart';
 
 class FlutterWebLayoutTemplate extends StatelessWidget {
-  const FlutterWebLayoutTemplate({Key key}) : super(key: key);
+  final Widget child;
+  const FlutterWebLayoutTemplate({Key key, @required this.child}) : super(key: key);
 
   // This layout template is for easy navigation between pages by using the Navigator Widget.
 
@@ -27,11 +28,7 @@ class FlutterWebLayoutTemplate extends StatelessWidget {
             children: <Widget>[
               NavigationBar(),
               Expanded(
-                child: Navigator(
-                  key: locator<NavigationService>().navigatorKey,
-                  onGenerateRoute: generateRoute,
-                  initialRoute: HomeRoute,
-                ),
+                child: child,
               )
             ],
           ),

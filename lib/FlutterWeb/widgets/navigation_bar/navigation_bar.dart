@@ -3,7 +3,7 @@ import 'package:all_flutter_gives/FlutterWeb/widgets/navigation_bar/navigation_b
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'navbar_items.dart';
+import '../navbar_item/navbar_items.dart';
 import 'navigation_bar_mobile.dart';
 
 class NavigationBar extends StatelessWidget {
